@@ -1,0 +1,24 @@
+.hding {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 25px;
+}
+body {
+
+  background-color: rgb(214, 240, 248);
+}
+
+
+.btmspc {
+  margin-bottom: 10px;
+  }
+
+inpt {
+  width: 300px;
+}

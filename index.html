@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+	<title>Firebase_Train_Scheduler</title>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <!-- <script   src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <!-- Moment.js Reference -->
+ 	 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+ 	 <!-- Additonal CSS  -->
+   <link  rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row btmspc">
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<h1 class="hding">NJ Transit</h1>
+					<h3 class="hding">Train Schedules</h3>
+				</div>
+				<div class="col-xs-2 col-sm-12 col-md-9 col-lg-9">
+					<img src="./assets/pictures/rail_schedules_header.jpg" alt="Train Picture" height="150" width="845">
+				</div>
+		</div>
+
+		<p></p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<!-- Current Trains -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong>Current Train</strong></h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-hover" id='trainTable'>
+							<thead>
+								<tr>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>Frequency</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>
+								</tr>
+							</thead>
+							<tbody id="trainDisplay">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			<!-- Add New Trains -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong>Add a New Train</strong></h3>
+					</div>
+
+					<div class="panel-body">
+						<!-- Entry Form -->
+						<form>
+								<label for="">Train Name</label>
+								<input type="text" class="form-control" id="trainNameInput">
+
+								<label for="">Destination</label>
+								<input type="text" class="form-control" id="destinationInput">
+
+								<div class="row">	<label for=""></label></div>
+
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+									<label for="">First Train Time (HHmm - military time)</label>
+									<input type="text" class="inpt" id="trainTimeInput">
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+									<label for="">Frequency (min)</label>
+									<input type="text" class="inpt" id="frequencyInput">
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+									<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Javascript -->
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+
+	<script src="./assets/js/train.js"></script>
+</body>
+</html>
